@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Jogo da memória com componentes de hardware do CyberQuiz: encontre os pares de CPU, placa-mãe, RAM, GPU e mais.">
+<meta name="theme-color" content="#05070a">
+<title>CyberQuiz · Jogo da Memória — Componentes de Hardware</title>
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2305070a'/%3E%3Cpath d='M9 21V12h2.6v3.2h4.8V12H19v9h-2.6v-3.5h-4.8V21z' fill='%2300f0ff'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&family=Inter:wght@400;500;600&family=Orbitron:wght@700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+    <a class="brand" href="../">
+        <span class="brand-mark"><i class="fa-solid fa-clone" aria-hidden="true"></i></span>
+        <span class="brand-text">
+            <strong>JOGO DA <em>MEMÓRIA</em></strong>
+            <small>COMPONENTES DE HARDWARE</small>
+        </span>
+    </a>
+
+    <div class="topbar-actions">
+        <button type="button" id="page-zoom-btn" class="ghost-btn zoom-btn" aria-pressed="false" title="Reduzir a página para 70%" aria-label="Reduzir a página para 70%">
+            <i class="fa-solid fa-magnifying-glass-minus" aria-hidden="true"></i><span>100%</span>
+        </button>
+        <button type="button" id="sound-btn" class="ghost-btn" aria-pressed="true">
+            <i class="fa-solid fa-volume-high" aria-hidden="true"></i><span>SOM ON</span>
+        </button>
+        <a class="ghost-btn quiz-btn" href="../../" title="Voltar para o CyberQuiz">
+            <i class="fa-solid fa-microchip" aria-hidden="true"></i><span>CYBERQUIZ</span>
+        </a>
+        <a class="ghost-btn back-btn" href="../">
+            <i class="fa-solid fa-house" aria-hidden="true"></i><span>MINIGAMES</span>
+        </a>
+    </div>
+</header>
+
+<main>
+    <section class="panel">
+        <div class="panel-head">
+            <div>
+                <h1><i class="fa-solid fa-clone" aria-hidden="true"></i> Encontre os pares</h1>
+                <p class="lead">Cada par combina a <strong>foto</strong> de uma peça com a <strong>função</strong> que ela exerce: "fornece a imagem" ⇄ placa de vídeo. Quanto menos movimentos, mais estrelas e pontos.</p>
+            </div>
+
+            <div class="stat-row" role="group" aria-label="Estatísticas da partida">
+                <div class="stat">
+                    <span class="stat-label">Movimentos</span>
+                    <strong data-memory-moves>0</strong>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Tempo</span>
+                    <strong data-memory-time>00:00</strong>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">Recorde</span>
+                    <strong data-memory-best>—</strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="toolbar">
+            <div class="chip-row" id="memory-levels" role="group" aria-label="Nível de dificuldade"></div>
+            <button type="button" class="chip chip-ghost" data-memory-restart
+                    title="Apagar todo o progresso do jogo da memória"
+                    aria-label="Apagar todo o progresso do jogo da memória">
+                <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> Reiniciar
+            </button>
+        </div>
+
+        <div class="board-wrap">
+            <div id="memory-board" class="board" role="group" aria-label="Tabuleiro do jogo da memória"></div>
+
+            <div id="memory-win" class="overlay hidden" role="dialog" aria-modal="true" aria-label="Você venceu">
+                <div class="overlay-card">
+                    <p class="overlay-kicker">TABULEIRO CONCLUÍDO</p>
+                    <h2>VOCÊ VENCEU!</h2>
+                    <p class="overlay-stars" data-win-stars aria-hidden="true">★★★</p>
+
+                    <ul class="overlay-stats">
+                        <li><span>Movimentos</span><strong data-win-moves>0</strong></li>
+                        <li><span>Tempo</span><strong data-win-time>00:00</strong></li>
+                        <li><span>Pontos</span><strong data-win-score>0</strong></li>
+                    </ul>
+
+                    <p class="overlay-note" data-win-record>Recorde: —</p>
+                    <p class="overlay-unlock" data-win-unlock hidden></p>
+
+                    <div class="overlay-actions">
+                        <button type="button" class="btn-primary" data-memory-again>
+                            <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> Jogar de novo
+                        </button>
+                        <button type="button" class="btn-primary btn-next hidden" data-win-next>
+                            Próximo nível <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                        <a class="chip chip-ghost" href="../MontagemDePC/">
+                            <i class="fa-solid fa-cubes" aria-hidden="true"></i> Montar o PC 3D
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="memory-lose" class="overlay overlay-lose hidden" role="dialog" aria-modal="true" aria-labelledby="memory-lose-title">
+                <div class="overlay-card">
+                    <p class="overlay-kicker">LIMITE DE MOVIMENTOS</p>
+                    <h2 id="memory-lose-title">VOCÊ NÃO CONSEGUIU</h2>
+
+                    <p class="overlay-lose-text" data-lose-note>Você usou todos os movimentos e ainda faltavam pares.</p>
+
+                    <ul class="overlay-stats">
+                        <li><span>Movimentos</span><strong data-lose-moves>0 / 100</strong></li>
+                        <li><span>Pares</span><strong data-lose-pairs>0 / 12</strong></li>
+                        <li><span>Tempo</span><strong data-lose-time>00:00</strong></li>
+                    </ul>
+
+                    <div class="overlay-actions">
+                        <button type="button" class="btn-primary" data-memory-lose-again>
+                            <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> Tentar de novo
+                        </button>
+                        <button type="button" class="chip chip-ghost" data-memory-lose-levels>
+                            <i class="fa-solid fa-layer-group" aria-hidden="true"></i> Trocar de nível
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="memory-reset" class="overlay overlay-reset hidden" role="alertdialog" aria-modal="true"
+                 aria-labelledby="memory-reset-title" aria-describedby="memory-reset-text">
+                <div class="overlay-card">
+                    <p class="overlay-kicker">APAGAR PROGRESSO</p>
+                    <h2 id="memory-reset-title">TEM CERTEZA?</h2>
+
+                    <p class="overlay-reset-text" id="memory-reset-text">
+                        Isso apaga os recordes de todos os níveis e bloqueia novamente Especialista,
+                        Mestre, Lendário e Cyber. A partida recomeça no Fácil. O zoom e o som são mantidos.
+                    </p>
+
+                    <div class="overlay-actions">
+                        <button type="button" class="btn-primary" data-memory-reset-cancel>
+                            <i class="fa-solid fa-xmark" aria-hidden="true"></i> Cancelar
+                        </button>
+                        <button type="button" class="btn-danger" data-memory-reset-confirm>
+                            <i class="fa-solid fa-trash-can" aria-hidden="true"></i> Apagar progresso
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="hint" id="memory-hint" role="status" aria-live="polite">Vire uma carta de peça e uma carta de função para descobrir qual faz o quê.</p>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>
+        <i class="fa-solid fa-clone" aria-hidden="true"></i>
+        Jogo da memória do <a href="../../">CyberQuiz</a>.
+        Fotos do Wikimedia Commons, mantendo suas licenças originais.
+    </p>
+    <details class="credits">
+        <summary>Créditos das imagens (CC BY / CC BY-SA)</summary>
+        <ul>
+            <li>CPU — Eric Gaba (Sting), CC BY-SA 4.0</li>
+            <li>Placa-mãe — Jacek Halicki, CC BY-SA 4.0</li>
+            <li>Memória RAM — Bretwa, CC BY-SA 4.0</li>
+            <li>SSD NVMe — D-Kuru, CC BY-SA 4.0</li>
+            <li>Placa de vídeo — TheStriker, CC BY 4.0</li>
+            <li>Fonte — Dmitry Makeev, CC BY-SA 4.0</li>
+            <li>Cooler — Eric Gaba (Sting), CC BY-SA 3.0</li>
+            <li>Gabinete — Tim Sheerman-Chase, CC BY 4.0</li>
+            <li>Rede — Deavmi, CC BY-SA 3.0</li>
+            <li>Periféricos — Morn, CC BY-SA 4.0</li>
+            <li>Monitor — Lucasbosch, CC BY-SA 4.0</li>
+            <li>Webcam — WrS.tm.pl, CC0</li>
+            <li>Roteador — Solijon Solayev, CC BY-SA 4.0</li>
+            <li>HD — Evan-Amos, CC BY-SA 3.0</li>
+            <li>Placa de som — Evan-Amos, Public domain</li>
+            <li>Ventoinha — Felhariri3680, CC BY-SA 3.0</li>
+            <li>Nobreak — Tahir mq, CC BY-SA 4.0</li>
+            <li>Placa de captura — TruthfulBeing, CC BY-SA 4.0</li>
+        </ul>
+    </details>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/sound.js"></script>
+<script src="js/memory.js"></script>
+<script src="js/app.js"></script>
+<script src="../../js/watermark.js"></script>
+
+</body>
+</html>

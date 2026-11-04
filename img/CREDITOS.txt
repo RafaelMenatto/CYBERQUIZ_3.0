@@ -1,0 +1,113 @@
+CREDITOS DAS IMAGENS - CYBERQUIZ
+=================================================================
+As fotos desta pasta vêm do Wikimedia Commons e estão sob licenças
+livres (CC BY / CC BY-SA). A atribuição é obrigatória e também aparece
+no rodapé da página ("Créditos das imagens").
+
+processador.jpg
+  Foto ...... Intel CPU Core i7 12700K Alder Lake perspective.jpg
+  Autor ..... Eric Gaba (Sting)
+  Licença ... CC BY-SA 4.0
+  Página .... https://commons.wikimedia.org/wiki/File:Intel_CPU_Core_i7_12700K_Alder_Lake_perspective.jpg
+
+placa-mae.jpg
+  Foto ...... 2023 Płyta główna Asus ROG STRIX Z690-A GAMING WIFI.jpg
+  Autor ..... Jacek Halicki
+  Licença ... CC BY-SA 4.0
+  Página .... https://commons.wikimedia.org/wiki/File:2023_P%C5%82yta_g%C5%82%C3%B3wna_Asus_ROG_STRIX_Z690-A_GAMING_WIFI.jpg
+
+memoria-ram.jpg
+  Foto ...... 2*8Go DDR4 Corsair - 2018-05-08.jpg
+  Autor ..... Bretwa
+  Licença ... CC BY-SA 4.0
+  Página .... https://commons.wikimedia.org/wiki/File:2%2A8Go_DDR4_Corsair_-_2018-05-08.jpg
+
+armazenamento-ssd.jpg
+  Foto ...... Samsung 980 PRO PCIe 4.0 NVMe SSD 1TB-top PNr°0915.jpg
+  Autor ..... D-Kuru
+  Licença ... CC BY-SA 4.0
+  Página .... https://commons.wikimedia.org/wiki/File:Samsung_980_PRO_PCIe_4.0_NVMe_SSD_1TB-top_PNr%C2%B00915.jpg
+
+placa-video.jpg
+  Foto ...... MSI GeForce RTX 3070 VENTUS 3X OC.jpg
+  Autor ..... TheStriker
+  Licença ... CC BY 4.0
+  Página .... https://commons.wikimedia.org/wiki/File:MSI_GeForce_RTX_3070_VENTUS_3X_OC.jpg
+
+fonte.jpg
+  Foto ...... ATX Computer power supply unit.jpg
+  Autor ..... Dmitry Makeev
+  Licença ... CC BY-SA 4.0
+  Página .... https://commons.wikimedia.org/wiki/File:ATX_Computer_power_supply_unit.jpg
+
+cooler.jpg
+  Foto ...... Noctua NH-U12P SE2 CPU cooler.jpg
+  Autor ..... Eric Gaba (Sting)
+  Licença ... CC BY-SA 3.0
+  Página .... https://commons.wikimedia.org/wiki/File:Noctua_NH-U12P_SE2_CPU_cooler.jpg
+
+rede.jpg
+  Foto ...... Ethernet switch 2.jpg
+  Autor ..... Deavmi
+  Licença ... CC BY-SA 3.0
+  Página .... https://commons.wikimedia.org/wiki/File:Ethernet_switch_2.jpg
+
+gabinete.jpg
+  Foto ...... Be Quiet PC Case Interior with GTX 3060 and P40.jpg
+  Autor ..... Tim Sheerman-Chase
+  Licença ... CC BY 4.0
+  Página .... https://commons.wikimedia.org/wiki/File:Be_Quiet_PC_Case_Interior_with_GTX_3060_and_P40.jpg
+
+perifericos.jpg
+  Foto ...... Lingbao JIGUANSHI Mechanical Gaming Keyboard.jpg
+  Autor ..... Morn
+  Licença ... CC BY-SA 4.0
+  Página .... https://commons.wikimedia.org/wiki/File:Lingbao_JIGUANSHI_Mechanical_Gaming_Keyboard.jpg
+
+monitor.jpg
+  Foto ...... EIZO Foris FG2421 VGA computer monitor displaying test pattern.png
+  Autor ..... Lucasbosch
+  Licença ... CC BY-SA 4.0
+  Página .... https://commons.wikimedia.org/wiki/File:EIZO_Foris_FG2421_VGA_computer_monitor_displaying_test_pattern.png
+
+webcam.jpg
+  Foto ...... USB webcam for PC.jpg
+  Autor ..... WrS.tm.pl
+  Licença ... CC0
+  Página .... https://commons.wikimedia.org/wiki/File:USB_webcam_for_PC.jpg
+
+roteador.jpg
+  Foto ...... Wi-fi router.jpg
+  Autor ..... Solijon Solayev
+  Licença ... CC BY-SA 4.0
+  Página .... https://commons.wikimedia.org/wiki/File:Wi-fi_router.jpg
+
+hd.jpg
+  Foto ...... 35-Desktop-Hard-Drive.jpg
+  Autor ..... Evan-Amos
+  Licença ... CC BY-SA 3.0
+  Página .... https://commons.wikimedia.org/wiki/File:35-Desktop-Hard-Drive.jpg
+
+placa-som.jpg
+  Foto ...... Turtle-Beach-Sound-Card.jpg
+  Autor ..... Evan-Amos
+  Licença ... Public domain
+  Página .... https://commons.wikimedia.org/wiki/File:Turtle-Beach-Sound-Card.jpg
+
+ventoinha.jpg
+  Foto ...... Sanyo 80x80x25mm computer cooling fan.jpg
+  Autor ..... Felhariri3680
+  Licença ... CC BY-SA 3.0
+  Página .... https://commons.wikimedia.org/wiki/File:Sanyo_80x80x25mm_computer_cooling_fan.jpg
+
+nobreak.jpg
+  Foto ...... Uninterruptible power supply.jpg
+  Autor ..... Tahir mq
+  Licença ... CC BY-SA 4.0
+  Página .... https://commons.wikimedia.org/wiki/File:Uninterruptible_power_supply.jpg
+
+placa-captura.jpg
+  Foto ...... Datapath VisionHD4 Quad Port Capture Card.jpg
+  Autor ..... TruthfulBeing
+  Licença ... CC BY-SA 4.0
+  Página .... https://commons.wikimedia.org/wiki/File:Datapath_VisionHD4_Quad_Port_Capture_Card.jpg
