@@ -1,4 +1,4 @@
-# CyberQuiz
+# CyberQuiz 3.0
 
 Um projeto educativo sobre hardware com quiz, guia de estudo e dois minijogos.
 Feito com HTML, CSS e JavaScript, sem instalação ou etapa de build.
