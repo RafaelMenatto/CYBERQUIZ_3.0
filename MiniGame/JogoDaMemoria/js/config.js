@@ -37,9 +37,9 @@ const MEMORY_CONFIG = {
         hard:   { label: 'Difícil', pairs: 8,  columns: 4, icon: 'fa-fire' },
         insano: { label: 'Insano',  pairs: 10, columns: 4, columnsWide: 5, icon: 'fa-skull' },
         expert: { label: 'Especialista', pairs: 12, columns: 4, columnsWide: 6, icon: 'fa-star', maxMoves: 100 },
-        master: { label: 'Mestre',       pairs: 14, columns: 4, columnsWide: 6, icon: 'fa-crown', maxMoves: 120 },
-        legend: { label: 'Lendário',     pairs: 16, columns: 4, columnsWide: 6, icon: 'fa-gem', maxMoves: 140 },
-        cyber:  { label: 'Cyber',        pairs: 18, columns: 4, columnsWide: 6, icon: 'fa-robot', maxMoves: 160 },
+        master: { label: 'Mestre',       pairs: 14, columns: 4, columnsWide: 6, icon: 'fa-crown', maxMoves: 110 },
+        legend: { label: 'Lendário',     pairs: 16, columns: 4, columnsWide: 6, icon: 'fa-gem', maxMoves: 120 },
+        cyber:  { label: 'Cyber',        pairs: 18, columns: 4, columnsWide: 6, icon: 'fa-robot', maxMoves: 130 },
     },
 
     /*

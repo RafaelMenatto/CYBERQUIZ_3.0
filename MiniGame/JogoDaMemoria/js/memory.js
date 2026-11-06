@@ -597,13 +597,30 @@ const MemoryGame = (() => {
             const conf = CFG.levels[key];
             const anterior = levelOrder()[levelOrder().indexOf(key) - 1];
             const limite = conf.maxMoves ? ' · limite de ' + conf.maxMoves + ' movimentos' : '';
-            btn.setAttribute('title', unlocked
-                ? ('Nível ' + conf.label + ' — ' + conf.pairs + ' pares' + limite)
-                : ('Conclua o nível ' + (CFG.levels[anterior] ? CFG.levels[anterior].label : '') + ' para liberar este.'));
-            // cadeado / check no botão
-            const icon = btn.querySelector('i');
+            // nível já concluído ganha o "V" de confirmação no chip
+            const done = completedLevels().includes(key);
+            btn.classList.toggle('completed', done);
+            const label = unlocked
+                ? ('Nível ' + conf.label + (done ? ' — concluído' : '') + ' · ' + conf.pairs + ' pares' + limite)
+                : ('Conclua o nível ' + (CFG.levels[anterior] ? CFG.levels[anterior].label : '') + ' para liberar este.');
+            btn.setAttribute('title', label);
+            btn.setAttribute('aria-label', label);
+            // cadeado (bloqueado) ou ícone do nível; o V fica em um selo à parte
+            const icon = btn.querySelector(':scope > i');
             if (icon) {
                 icon.className = 'fa-solid ' + (unlocked ? conf.icon : 'fa-lock');
+            }
+            let check = btn.querySelector('.chip-check');
+            if (done) {
+                if (!check) {
+                    check = document.createElement('span');
+                    check.className = 'chip-check';
+                    check.setAttribute('aria-hidden', 'true');
+                    check.innerHTML = '<i class="fa-solid fa-check"></i>';
+                    btn.appendChild(check);
+                }
+            } else if (check) {
+                check.remove();
             }
             const small = btn.querySelector('small');
             if (small) small.textContent = unlocked ? (conf.pairs + ' pares') : 'bloqueado';

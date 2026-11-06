@@ -270,6 +270,39 @@ h1 i { color: var(--accent); margin-right: 6px; }
 
 .chip.locked small { opacity: 0.8; font-style: italic; }
 
+/* nível concluído: "V" verde de confirmação ao lado do chip */
+.chip.completed {
+    color: var(--text);
+    border-color: rgba(0, 255, 102, 0.45);
+}
+
+.chip.completed:hover { border-color: var(--green); }
+
+.chip-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 17px;
+    height: 17px;
+    margin-left: -2px;
+    border-radius: 50%;
+    background: var(--green);
+    color: #04120a;
+    font-size: 0.58rem;
+    line-height: 1;
+    box-shadow: 0 0 10px rgba(0, 255, 102, 0.55);
+}
+
+/* no chip selecionado (fundo ciano) o texto e o selo invertem para
+   manter o contraste */
+.chip.active.completed { color: var(--bg); border-color: var(--accent); }
+
+.chip.active .chip-check {
+    background: #04120a;
+    color: var(--green);
+    box-shadow: none;
+}
+
 /* ----------------------------------------------------------- tabuleiro */
 .board-wrap { position: relative; }
 
